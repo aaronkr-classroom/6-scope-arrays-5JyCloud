@@ -22,12 +22,12 @@ int main(void)
   printf("str length = %d\n", str_length);
 
   char data2[10] = {'a', 'b', 'c', 0};
-  char result[16];
+  char result[100] = 'Hello';
 
   printf("Result (0): %s", result);
-  strcpy_s(result, strlen(result), data2); // result = "abc";
+  strcpy_s(result, sizeof(result), data2); // result = "abc";
   printf("Result (cpy): %s", result);
-  strcat_s(result, strlen(result), "def"); // result = "abcdef";
+  strcat_s(result, sizeof(result), "def"); // result = "abcdef";
   printf("Result (cat): %s", result);
 
 
